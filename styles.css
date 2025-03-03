@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Raleway', sans-serif;
-    background: linear-gradient(to right, #ff0000, #004ad4); /* Add a gradient background */
+    background: linear-gradient(to right, #ff0000ba, #004ad493); /* Add a gradient background */
     color: rgb(253, 250, 250);
     text-align: center;
     margin: 0;
