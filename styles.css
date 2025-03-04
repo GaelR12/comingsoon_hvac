@@ -1,38 +1,48 @@
 /* General Styles */
 body {
     font-family: 'Raleway', sans-serif;
-    background: linear-gradient(to right, #ff0404ce, #0359f8b9); /* Add a gradient background */
+    background: repeating-radial-gradient(rgba(255, 0, 0, 0.853),rgba(0, 0, 255, 0.776)); /* Add a gradient background */
     color: rgb(253, 250, 250);
     text-align: center;
     margin: 0;
-    padding-top: 150px;
+    padding-top: 300px; /* Adjusted to prevent overlap */
     height: 100vh; /* Full page height */
     background-size: cover; /* Ensures the background covers the entire page */
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: #0a0a0a; /* Slightly transparent background */
+    background-color: #0a0a0a; /* Dark background */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 0; /* More padding for better height */
-}
-
-.navbar-brand img {
-    height: 60px;
-    margin-right: 10px;
+    padding: 10px 15px; /* Adjust padding */
+    display: flex;
+    align-items: center;
 }
 
 /* Logo */
+.navbar-brand img {
+    height: 120px; /* Adjusted size */
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Navbar Toggler */
 .navbar-toggler {
-    border: 80px;
+    border: none; /* Fix border issue */
+    outline: none;
+    margin-left: auto; /* Push to right */
 }
 
 .navbar-toggler:focus {
     box-shadow: none;
 }
 
+/* Align navbar items */
 .navbar-collapse {
     justify-content: flex-end;
+    background: rgb(253, 250, 250); /* Ensure visibility on collapse */
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* Coming Soon Container */
@@ -45,11 +55,12 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Icon Animation */
 .icon {
     font-size: 70px;
     color: white;
     margin-bottom: 20px;
-    animation: bounce 2s infinite; /* Add a bounce animation to the icon */
+    animation: bounce 2s infinite;
 }
 
 h1 {
@@ -59,21 +70,37 @@ h1 {
 
 p {
     font-weight: 300;
-    color:  white;
+    color: white;
 }
 
 /* Hover effects for navigation links */
 .nav-link:hover {
-    color: #007bff !important;
-}
+    color: #00aaff !important; /* Bright blue */
+    transform: scale(1.1); /* Slight zoom effect */
+    text-shadow: 0px 0px 10px rgba(0, 170, 255, 0.8);}
 
-/* Responsive Styles */
+/* Responsive Fixes */
 @media (max-width: 768px) {
     .coming-soon-container {
         width: 85%;
     }
+    
+    /* Ensure navbar elements stay in one line */
+    .navbar {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
     .navbar-brand img {
-        height: 50px;
+        height: 100px; /* Adjust logo size for mobile */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Keep it aligned */
+    }
+
+    .navbar-collapse {
+        text-align: center; /* Center align the links */
     }
 }
 
